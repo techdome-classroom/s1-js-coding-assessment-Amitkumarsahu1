@@ -1,6 +1,38 @@
 const decodeTheRing = function (s, p) {
 
-    // write your code here
+  const m = message.length;
+  const p = pattern.length;
+
+  // Create a DP table of size (m+1) x (p+1) initialized to false
+  const dp = Array(m + 1).fill(false).map(() => Array(p + 1).fill(false));
+
+  // Base case: Empty pattern matches empty message
+  dp[0][0] = true;
+
+  // Fill the table for the pattern starting with '*' (since '*' can match an empty message)
+  for (let j = 1; j <= p; j++) {
+      if (pattern[j - 1] === '*') {
+          dp[0][j] = dp[0][j - 1];  // '*' can match an empty string
+      }
+  }
+
+  // Fill the rest of the table
+  for (let i = 1; i <= m; i++) {
+      for (let j = 1; j <= p; j++) {
+          if (pattern[j - 1] === message[i - 1] || pattern[j - 1] === '?') {
+              // If characters match or pattern has '?', take diagonal value
+              dp[i][j] = dp[i - 1][j - 1];
+          } else if (pattern[j - 1] === '*') {
+              // If pattern has '*', we can either:
+              // - Use '*' to match no character: dp[i][j-1]
+              // - Use '*' to match current character: dp[i-1][j]
+              dp[i][j] = dp[i][j - 1] || dp[i - 1][j];
+          }
+      }
+  }
+
+  // The result will be at dp[m][p]
+  return dp[m][p];
 
   };
   
