@@ -26,9 +26,9 @@ const getTotalIsles = function (grid) {
   
   for (let r = 0; r < rows; r++) {
       for (let c = 0; c < cols; c++) {
-          if (grid[r][c] === 'L') {  // Start a DFS if we find unvisited land
+          if (grid[r][c] === 'L') { 
               islandCount++;
-              dfs(r, c);  // Mark the entire island as visited
+              dfs(r, c);  
           }
       }
   }
