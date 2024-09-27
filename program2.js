@@ -1,6 +1,6 @@
 const decodeTheRing = function (s, p) {
 
-    const m = s.length;  // Length of the message
+    const m = s.length; 
     const n = p.length;  // Length of the pattern (renamed from `p` to `n` to avoid conflict)
 
     // Create a DP table of size (m+1) x (n+1) initialized to false
