@@ -29,7 +29,7 @@ const decodeTheRing = function (s, p) {
         }
     }
 
-    // The result will be at dp[m][n]
+   
     return dp[m][n];
 };
   
