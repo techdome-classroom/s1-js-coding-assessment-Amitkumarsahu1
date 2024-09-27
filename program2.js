@@ -3,7 +3,7 @@ const decodeTheRing = function (s, p) {
   const m = message.length;
   const p = pattern.length;
 
-  // Create a DP table of size (m+1) x (p+1) initialized to false
+  
   const dp = Array(m + 1).fill(false).map(() => Array(p + 1).fill(false));
 
   // Base case: Empty pattern matches empty message
