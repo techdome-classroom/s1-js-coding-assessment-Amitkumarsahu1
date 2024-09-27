@@ -9,7 +9,7 @@ const decodeTheRing = function (s, p) {
     
     dp[0][0] = true;
 
-    // Fill the table for the pattern starting with '*' (since '*' can match an empty message)
+    
     for (let j = 1; j <= n; j++) {
         if (p[j - 1] === '*') {
             dp[0][j] = dp[0][j - 1];  // '*' can match an empty string
