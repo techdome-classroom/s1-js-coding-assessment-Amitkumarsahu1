@@ -16,7 +16,7 @@ const decodeTheRing = function (s, p) {
       }
   }
 
-  // Fill the rest of the table
+  
   for (let i = 1; i <= m; i++) {
       for (let j = 1; j <= p; j++) {
           if (pattern[j - 1] === message[i - 1] || pattern[j - 1] === '?') {
