@@ -13,7 +13,7 @@ const getTotalIsles = function (grid) {
           return;
       }
 
-      // Mark this cell as water to avoid re-visiting
+     
       grid[r][c] = 'W';
 
       // Visit all adjacent cells (up, down, left, right)
