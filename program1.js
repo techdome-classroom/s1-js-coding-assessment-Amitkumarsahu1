@@ -17,10 +17,10 @@ const getTotalIsles = function (grid) {
       grid[r][c] = 'W';
 
       
-      dfs(r - 1, c);  // Up
-      dfs(r + 1, c);  // Down
-      dfs(r, c - 1);  // Left
-      dfs(r, c + 1);  // Right
+      dfs(r - 1, c);  
+      dfs(r + 1, c);  
+      dfs(r, c - 1);  
+      dfs(r, c + 1);  
   }
 
   // Iterate over every cell in the grid
