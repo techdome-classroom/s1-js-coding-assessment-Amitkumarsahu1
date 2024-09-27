@@ -23,9 +23,7 @@ const decodeTheRing = function (s, p) {
                 
                 dp[i][j] = dp[i - 1][j - 1];
             } else if (p[j - 1] === '*') {
-                // If pattern has '*', we can either:
-                // - Use '*' to match no character: dp[i][j-1]
-                // - Use '*' to match current character: dp[i-1][j]
+                
                 dp[i][j] = dp[i][j - 1] || dp[i - 1][j];
             }
         }
