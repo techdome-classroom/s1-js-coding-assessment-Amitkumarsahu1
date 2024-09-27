@@ -6,7 +6,7 @@ const decodeTheRing = function (s, p) {
   
   const dp = Array(m + 1).fill(false).map(() => Array(p + 1).fill(false));
 
-  // Base case: Empty pattern matches empty message
+  
   dp[0][0] = true;
 
   // Fill the table for the pattern starting with '*' (since '*' can match an empty message)
