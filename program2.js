@@ -12,7 +12,7 @@ const decodeTheRing = function (s, p) {
   
   for (let j = 1; j <= p; j++) {
       if (pattern[j - 1] === '*') {
-          dp[0][j] = dp[0][j - 1];  // '*' can match an empty string
+          dp[0][j] = dp[0][j - 1];  
       }
   }
 
