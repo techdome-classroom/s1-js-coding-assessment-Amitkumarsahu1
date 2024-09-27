@@ -8,7 +8,7 @@ const getTotalIsles = function (grid) {
     let islandCount = 0;
 
     function dfs(r, c) {
-      // Base case: if out of bounds or at water, stop the search
+      
       if (r < 0 || r >= rows || c < 0 || c >= cols || grid[r][c] === 'W') {
           return;
       }
