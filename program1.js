@@ -16,7 +16,7 @@ const getTotalIsles = function (grid) {
      
       grid[r][c] = 'W';
 
-      // Visit all adjacent cells (up, down, left, right)
+      
       dfs(r - 1, c);  // Up
       dfs(r + 1, c);  // Down
       dfs(r, c - 1);  // Left
