@@ -1,4 +1,3 @@
-Copy code
 const decodeTheRing = function (s, p) {
 
     const m = s.length;  // Length of the message
