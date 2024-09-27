@@ -20,7 +20,7 @@ const decodeTheRing = function (s, p) {
     for (let i = 1; i <= m; i++) {
         for (let j = 1; j <= n; j++) {
             if (p[j - 1] === s[i - 1] || p[j - 1] === '?') {
-                // If characters match or pattern has '?', take diagonal value
+                
                 dp[i][j] = dp[i - 1][j - 1];
             } else if (p[j - 1] === '*') {
                 // If pattern has '*', we can either:
